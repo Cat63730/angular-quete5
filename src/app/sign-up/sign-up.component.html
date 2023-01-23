@@ -1,0 +1,46 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      Form submitted ? {{myForm.submitted}}
+      Form valid ? {{myForm.valid}}
+      Form invalid ? {{myForm.invalid}}
+    </div>
+    <fieldset>
+      <label for="email-order">Email</label>
+      <input id="email-order" name="email-order" [(ngModel)]="model.email" #email="ngModel" type="email"  required maxlength="25">
+    </fieldset>
+
+    <div *ngIf="email.errors">
+      <span *ngIf="email.errors?.['required']">Le titre est requis</span>
+      <span *ngIf="email.errors?.['maxlength']">La longueur maximale doit être inférieure à 25</span>
+    </div>
+
+    <fieldset>
+      <label for="firstName-order">FirstName</label>
+      <input id="firstName-order" name="firstName-order" [(ngModel)]="model.firstName" #firstName="ngModel" type="text"  required>
+    </fieldset>
+
+    <div *ngIf="firstName.errors">
+      <span *ngIf="firstName.errors?.['required']">Le champ quantité est requis</span>
+    </div>
+
+    <fieldset>
+      <label for="lastName-order">lastName</label>
+      <input id="lastName-order" name="lastName-order" [(ngModel)]="model.lastName" #lastName="ngModel" type="text"  required>
+    </fieldset>
+
+    <div *ngIf="firstName.errors">
+      <span *ngIf="lastName.errors?.['required']">Le champ quantité est requis</span>
+    </div>
+
+    <fieldset>
+      <label for="password-order">Password</label>
+      <input id="password-order" name="password-order" [(ngModel)]="model.password" #password="ngModel" type="string" required email>
+    </fieldset>
+
+    <div *ngIf="firstName.errors">
+      <span *ngIf="password.errors?.['required']">Le champ quantité est requis</span>
+    </div>
+
+    <button type="reset">Restaurer</button>
+    <button type="submit">Sauvegarder</button>
+</form>

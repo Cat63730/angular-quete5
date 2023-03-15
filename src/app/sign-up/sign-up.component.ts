@@ -4,14 +4,14 @@ import { Order } from '../modele';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
-  model: Order = new Order('','','','');
+  model: Order = new Order('', '', '', '');
 
-constructor(){}
+  constructor() {}
 
-onSubmit(): void{
-  console.log(this.model);
-}
+  onSubmit(): void {
+    console.log(this.model);
+  }
 }

@@ -22,19 +22,19 @@ export class MyValidators{
     return () =>{
       if(tittle.value || id.value){
         return null;
-    }else{
+    }else {
       return {isRequired : "L'un des deux champs 'Identifiant' ou 'Titre' doit être renseigné"}
     }
     }
   }
 
-  isIdActivated(id: any){
-    return () =>{
-      if(id.value){
-        return null;
-      } else{
-        return {isRequired : "id nécessaire pour avoir la liste des ..."}
-      }
-    }
-  }
+  // isIdActivated(id: any){
+  //   return () =>{
+  //     if(id.value){
+  //       return null;
+  //     } else{
+  //       return {isRequired : "id nécessaire pour avoir la liste des ..."}
+  //     }
+  //   }
+  // }
 }

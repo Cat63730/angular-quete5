@@ -26,7 +26,7 @@ export class SearchMovieComponent {
 
     this.defineTypeForm();
 
-    this.myForm.controls.idOrTittle.setValidators(validators.isIdActivated(this.myForm.controls.idOrTittle.controls.id))
+    // this.myForm.controls.idOrTittle.setValidators(validators.isIdActivated(this.myForm.controls.idOrTittle.controls.id))
 
     this.myForm.valueChanges
     .subscribe(value=>{

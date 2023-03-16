@@ -1,10 +1,10 @@
 # AngularQuete6
 ![image](https://user-images.githubusercontent.com/94469220/225695913-5ea3def3-776c-4b98-a5a0-e912d0c51d1d.png)
-# Bonus1
+# Bonus1 (ça ne marche qu'à moitié, ok !!!!)
 ![image](https://user-images.githubusercontent.com/94469220/225696353-868f5b23-5b76-48dc-ad2c-7f5ab101e45c.png)
 ![image](https://user-images.githubusercontent.com/94469220/225696505-9b07f384-edd0-4d9b-b707-c70445011c5a.png)
 
-# Bonus2 (ça ne marche qu'à moitié, ok !!!!)
+# Bonus2 
 ![image](https://user-images.githubusercontent.com/94469220/225695718-7853d022-948d-4cca-97e3-7a89c7f9dd0b.png)
 
 

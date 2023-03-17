@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MyValidators } from '../my-validators';
 
 @Component({
@@ -9,18 +9,20 @@ import { MyValidators } from '../my-validators';
 })
 export class SearchMovieComponent {
 
-  myForm;
+  myForm = this.formBuilder.group({
+    idOrTittle: this.formBuilder.group({
+      id:[''],
+      tittle: ['']
+    }),
+    type: [''],
+    releaseYear: ['', [Validators.required, this.validators.rangeDateValidator(1900, new Date().getFullYear())]],
+    form: [''],
+
+  })
 
   constructor (private formBuilder : FormBuilder, private validators : MyValidators){
-    this.myForm = formBuilder.group({
-      idOrTittle: formBuilder.group({
-        id:[''],
-        tittle: ['']
-      }),
-      type: [''],
-      releaseYear: ['', [Validators.required, validators.rangeDateValidator(1900, new Date().getFullYear())]],
-      form: [''],
-    })
+   
+   
 
     this.myForm.controls.idOrTittle.setValidators(validators.isRequiredValidator(this.myForm.controls.idOrTittle.controls.tittle, this.myForm.controls.idOrTittle.controls.id));
 

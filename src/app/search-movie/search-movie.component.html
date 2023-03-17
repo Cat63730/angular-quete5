@@ -18,6 +18,7 @@
 
   <p *ngIf="myForm2.submitted && myForm.controls.idOrTittle.errors">
     {{ myForm.controls.idOrTittle.errors["isRequired"] }}
+    <!-- {{myForm.controls.idOrTittle.errors[]}} -->
   </p>
 
   <select name="type" id="type" formControlName="type" *ngIf="!myForm.controls.idOrTittle.errors">

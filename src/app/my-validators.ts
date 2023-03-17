@@ -12,7 +12,7 @@ export class MyValidators{
       if (control.value >= min && control.value <= max){
         return null;
       }else {
-        return { min: 'année minimale : ${min}, année max : ${max}'}
+        return { min: `année minimale : ${min}, année maximale : ${max}`}
       }
     }
   }

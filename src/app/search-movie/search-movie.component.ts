@@ -36,12 +36,12 @@ export class SearchMovieComponent {
     });
   }
 
-  onSubmit(){
-    this.myForm.valueChanges
-    .subscribe(value => {
-      console.log(value);
-    })
-  }
+  // onSubmit(){
+  //   this.myForm.valueChanges
+  //   .subscribe(value => {
+  //     console.log(value);
+  //   })
+  // }
 
   defineTypeForm(){
     this.myForm.patchValue({
